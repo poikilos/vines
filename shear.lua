@@ -26,25 +26,6 @@ minetest.register_tool("vines:shears", {
 		minetest.record_protection_violation(pos, user:get_player_name())
 		return
 	end
-	local node = minetest.get_node(pos)
-	if node.name == "vines:rope" then
-		itemstack:add_wear(65535 / (USES - 1))
-		minetest.add_node(pos, {name="vines:rope_bottom"})
-		local p = {x=pos.x, y=pos.y-1, z=pos.z}
-		local n = minetest.get_node(p)
-		if  (n.name == 'vines:rope' or n.name == 'vines:rope_bottom') then
-			minetest.add_node(p, {name="vines:rope_top"})
-		end
-	end
-	if node.name == "vines:ropeladder" then
-		itemstack:add_wear(65535 / (USES - 1))
-		minetest.add_node(pos, {name="vines:ropeladder_bottom", param2=node.param2})
-		local p = {x=pos.x, y=pos.y-1, z=pos.z}
-		local n = minetest.get_node(p)
-		if  (n.name == 'vines:ropeladder' or n.name == 'vines:ropeladder_bottom') then
-			minetest.add_node(p, {name="vines:ropeladder_falling", param2=n.param2})
-		end
-	end
   end
   
 })
