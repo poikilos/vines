@@ -1,3 +1,7 @@
+-- internationalization boilerplate
+local MP = minetest.get_modpath(minetest.get_current_modname())
+local S, NS = dofile(MP.."/intllib.lua")
+
 local grass_burn_time = minetest.get_craft_result({method="fuel", width=1, items={ItemStack("default:grass_1")}}).time
 
 vines.register_vine = function( name, defs, biome )
@@ -72,7 +76,7 @@ vines.register_vine = function( name, defs, biome )
   })
 
   minetest.register_node( vine_name_middle, {
-    description = "Matured "..defs.description,
+    description = S("Matured") .. " " .. defs.description,
 	_doc_items_create_entry = false,
     walkable = false,
     climbable = true,

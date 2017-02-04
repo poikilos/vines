@@ -1,5 +1,9 @@
+-- internationalization boilerplate
+local MP = minetest.get_modpath(minetest.get_current_modname())
+local S, NS = dofile(MP.."/intllib.lua")
+
 vines.register_vine( 'root', {
-  description = "Roots",
+  description = S("Roots"),
   _doc_items_longdesc = vines.doc.roots_longdesc,
   _doc_items_usagehelp = vines.doc.vines_usage,
   average_length = 9,
@@ -19,7 +23,7 @@ vines.register_vine( 'root', {
 })
 
 vines.register_vine( 'vine', {
-  description = "Vines",
+  description = S("Vines"),
   _doc_items_longdesc = vines.doc.vines_longdesc,
   _doc_items_usagehelp = vines.doc.vines_usage,
   average_length = 5,
@@ -42,7 +46,7 @@ vines.register_vine( 'vine', {
 })
 
 vines.register_vine( 'side', {
-  description = "Vines",
+  description = S("Vines"),
   _doc_items_longdesc = vines.doc.vines_longdesc,
   _doc_items_usagehelp = vines.doc.vines_usage,
   average_length = 6,
@@ -66,7 +70,7 @@ vines.register_vine( 'side', {
 })
 
 vines.register_vine( "jungle", {
-  description = "Jungle Vines",
+  description = S("Jungle Vines"),
   _doc_items_longdesc = vines.doc.vines_longdesc,
   _doc_items_usagehelp = vines.doc.vines_usage,
   average_length = 7,
@@ -95,7 +99,7 @@ vines.register_vine( "jungle", {
 })
 
 vines.register_vine( 'willow', {
-  description = "Willow Vines",
+  description = S("Willow Vines"),
   _doc_items_longdesc = vines.doc.vines_longdesc,
   _doc_items_usagehelp = vines.doc.vines_usage,
   average_length = 9,

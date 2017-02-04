@@ -1,7 +1,11 @@
+-- internationalization boilerplate
+local MP = minetest.get_modpath(minetest.get_current_modname())
+local S, NS = dofile(MP.."/intllib.lua")
+
 local USES = 200
 
 minetest.register_tool("vines:shears", {
-  description = "Shears",
+  description = S("Shears"),
   _doc_items_longdesc = vines.doc.shears_longdesc,
   _doc_items_usagehelp = vines.doc.shears_usage,
   inventory_image = "vines_shears.png",
