@@ -1,3 +1,5 @@
+local grass_burn_time = minetest.get_craft_result({method="fuel", width=1, items={ItemStack("default:grass_1")}}).time
+
 vines.register_vine = function( name, defs, biome )
   local biome = biome
   local groups = { vines=1, snappy=3, flammable=2 }
@@ -62,6 +64,12 @@ vines.register_vine = function( name, defs, biome )
       vines.dig_vine( pos, drop_node, user )
     end
   })
+  
+  minetest.register_craft({
+	type = "fuel",
+	recipe = vine_name_end,
+	burntime = grass_burn_time,
+  })
 
   minetest.register_node( vine_name_middle, {
     description = "Matured "..defs.description,
@@ -91,6 +99,12 @@ vines.register_vine = function( name, defs, biome )
     after_dig_node = function( pos, node, oldmetadata, user )
       vines.dig_vine( pos, drop_node, user )
     end
+  })
+  
+  minetest.register_craft({
+	type = "fuel",
+	recipe = vine_name_middle,
+	burntime = grass_burn_time,
   })
 
   if minetest.get_modpath("doc") then
