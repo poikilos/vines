@@ -25,7 +25,7 @@ vines.register_vine = function( name, defs, biome )
 	local drawtype = 'signlike'
 	if ( not biome.spawn_on_side ) then
 		--different properties for bottom and side vines.
-		selection_box = { type = "fixed", fixed = { -0.4, -1/2, -0.4, 0.4, 1/2, 0.4 }, }
+		selection_box = { type = "fixed", fixed = { -1/8, -1/2, -1/8, 1/8, 1/2, 1/8 }, }
 		drawtype = 'plantlike'
 	end
 
