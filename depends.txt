@@ -3,3 +3,5 @@ biome_lib
 moretrees?
 doc?
 intllib?
+mobs?
+creatures?
