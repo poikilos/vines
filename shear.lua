@@ -19,19 +19,7 @@ minetest.register_tool("vines:shears", {
       snappy={times={[3]=0.2}, uses=60, maxlevel=3},
       wool={times={[3]=0.2}, uses=60, maxlevel=3}
     }
-  },
-  
-  on_use = function(itemstack, user, pointed_thing)
-	if pointed_thing.type ~= "node" then
-		return
-	end
-	local pos = pointed_thing.under
-	if minetest.is_protected(pos, user:get_player_name()) then
-		minetest.record_protection_violation(pos, user:get_player_name())
-		return
-	end
-  end
-  
+  },  
 })
 
 minetest.register_craft({
