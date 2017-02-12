@@ -21,14 +21,14 @@ local shear_def = {
     }
   },  
 }
-if minetest.get_modpath("creatures") then
+if minetest.get_modpath("creatures") or minetest.get_modpath("mobs") then
 	shear_def.groups = {}
 	shear_def.groups.not_in_creative_inventory = 1
 end -- there's a set of shears in the Creatures mod, don't bother with our own set.
 
 minetest.register_tool("vines:shears", shear_def)
 
-if minetest.get_modpath("creatures") then return end
+if minetest.get_modpath("creatures") or minetest.get_modpath("mobs") then return end
 
 minetest.register_craft({
   output = 'vines:shears',
