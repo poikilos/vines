@@ -22,7 +22,7 @@ local shear_def = {
 	},
 	after_use = function(itemstack, user, node, digparams)
 		minetest.sound_play("vines_shears", {pos=user:getpos()})
-		if not minetest.setting_getbool("creative_mode") then
+		if not minetest.settings:get_bool("creative_mode") then
 			itemstack:add_wear(65535/(USES-1))
 		end
 		return itemstack
