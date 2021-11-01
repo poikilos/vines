@@ -36,6 +36,7 @@ vines.register_vine( 'vine', {
 	spawn_surfaces = {
 		"default:leaves",
 		"default:jungleleaves",
+		"default:jungle_leaves",
 		"moretrees:jungletree_leaves_red",
 		"moretrees:jungletree_leaves_yellow",
 		"moretrees:jungletree_leaves_green"
@@ -60,6 +61,7 @@ vines.register_vine( 'side', {
 	spawn_surfaces = {
 		"default:leaves",
 		"default:jungleleaves",
+		"default:jungle_leaves",
 		"moretrees:jungletree_leaves_red",
 		"moretrees:jungletree_leaves_yellow",
 		"moretrees:jungletree_leaves_green"
@@ -78,6 +80,7 @@ vines.register_vine( "jungle", {
 	choose_random_wall = true,
 	neighbors = {
 		"default:jungleleaves",
+		"default:jungle_leaves",
 		"moretrees:jungletree_leaves_red",
 		"moretrees:jungletree_leaves_yellow",
 		"moretrees:jungletree_leaves_green"
@@ -91,6 +94,7 @@ vines.register_vine( "jungle", {
 	spawn_chance = 100,
 	spawn_surfaces = {
 		"default:jungletree",
+		"default:jungle_trunk",
 		"moretrees:jungletree_trunk"
 	},
 	spawn_on_side = true,
